@@ -19,4 +19,4 @@ Built with HTML, CSS, and creative spark ✨
 
 ## 🚀 Connect With Me
 📫 [LinkedIn](https://linkedin.com/in/devianshi...)  
-💌 Email: devianshigoyal@example.com
+💌 Email: devianshig22@gmail.com
