@@ -680,7 +680,7 @@ footer {
   position: absolute;
   width: 16px;
   height: 16px;
-  color: #b8d8bf; /* soft pastel green to match your theme */
+  color: #b8d8bf;
   font-size: 1.2rem;
   pointer-events: none;
   animation: fadeStar 0.6s forwards;
