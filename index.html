@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devianshi | CS Portfolio</title>
+    <meta name="description" content="Portfolio of a Computer Science Major specializing in Cybersecurity and AI.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- Placeholder for FontAwesome, user might need their own kit or I can use a CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">&lt;Devianshi /&gt;</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="name">Devianshi Goyal</h1>
+                    <p class="tagline">Cybersecurity & AI Enthusiast</p>
+                    <p class="sub-tagline">Building secure, intelligent systems for the future.</p>
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn primary-btn">View Work</a>
+                        <a href="assets/Devianshi Goyal.pdf" target="_blank" class="btn secondary-btn">Resume</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/profile.jpg" alt="Devianshi Goyal" class="profile-pic-hero">
+                </div>
+            </div>
+        </section>
+
+        <main>
+            <section id="about" class="section">
+                <h2 class="section-title">About</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>
+                            I am a forward-thinking Software Engineer specializing in the intersection of Artificial
+                            Intelligence
+                            and Cybersecurity. With a robust foundation in full-stack development and a passion for
+                            building
+                            secure, intelligent systems, I transform complex challenges into scalable, high-performance
+                            solutions.
+                        </p>
+                        <p>
+                            My expertise spans developing autonomous systems, architecting secure web applications, and
+                            leveraging machine learning to drive innovation. I am driven by a commitment to engineering
+                            excellence and a desire to create impactful technology that pushes the boundaries of what's
+                            possible.
+                        </p>
+
+                        <div class="education-section">
+                            <h3>Education</h3>
+                            <div class="education-item">
+                                <div class="education-header">
+                                    <strong>Bachelor of Science in Computer Science</strong>
+                                    <span class="education-year">May 2026</span>
+                                </div>
+                                <p class="education-university">Arizona State University</p>
+                                <p class="education-focus">Specialization: Cybersecurity & Artificial Intelligence |
+                                    GPA: 3.69</p>
+                                <p class="education-recognition"><i class="fas fa-award"></i> Dean's List Recognition
+                                    (2022–2025)</p>
+                                <div class="relevant-courses">
+                                    <h4>Relevant Coursework:</h4>
+                                    <div class="course-tags">
+                                        <span>Data Structures & Algorithms</span>
+                                        <span>Intro to Software Engineering</span>
+                                        <span>Principles of Programming Languages</span>
+                                        <span>Operating Systems</span>
+                                        <span>Computer and Network Forensics</span>
+                                        <span>Distributed Software Development</span>
+                                        <span>Intro Artificial Intelligence</span>
+                                        <span>Intro Human Computer Interaction</span>
+                                        <span>Data & Information Security</span>
+                                        <span>Computer Network Security</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+
+            <section id="skills" class="section">
+                <h2 class="section-title">Technical Arsenal</h2>
+                <div class="skills-grid">
+                    <!-- Languages -->
+                    <div class="skill-category">
+                        <h3><i class="fas fa-code"></i> Languages</h3>
+                        <div class="skill-badges">
+                            <span class="badge"><i class="fab fa-python"></i> Python</span>
+                            <span class="badge"><i class="fab fa-java"></i> Java</span>
+                            <span class="badge"><i class="fas fa-code"></i> C/C++</span>
+                            <span class="badge"><i class="fab fa-js"></i> JavaScript</span>
+                            <span class="badge"><i class="fas fa-database"></i> SQL</span>
+                            <span class="badge"><i class="fas fa-calculator"></i> MATLAB</span>
+                            <span class="badge"><i class="fas fa-code"></i> Scheme</span>
+                            <span class="badge"><i class="fas fa-terminal"></i> Bash</span>
+                        </div>
+                    </div>
+                    <!-- Frameworks & Libs -->
+                    <div class="skill-category">
+                        <h3><i class="fas fa-layer-group"></i> Frameworks & Libs</h3>
+                        <div class="skill-badges">
+                            <span class="badge"><i class="fab fa-react"></i> React</span>
+                            <span class="badge"><i class="fab fa-node-js"></i> Node.js</span>
+                            <span class="badge"><i class="fas fa-server"></i> Django</span>
+                            <span class="badge"><i class="fab fa-bootstrap"></i> Bootstrap</span>
+                            <span class="badge"><i class="fas fa-desktop"></i> JavaFX</span>
+                            <span class="badge"><i class="fas fa-wind"></i> Animate.css</span>
+                            <span class="badge"><i class="fas fa-table"></i> Pandas</span>
+                            <span class="badge"><i class="fas fa-calculator"></i> NumPy</span>
+                            <span class="badge"><i class="fas fa-brain"></i> Scikit-learn</span>
+                            <span class="badge"><i class="fas fa-mobile-alt"></i> Flutter</span>
+                            <span class="badge"><i class="fas fa-code"></i> Dart</span>
+                        </div>
+                    </div>
+                    <!-- Web & Cloud -->
+                    <div class="skill-category">
+                        <h3><i class="fas fa-cloud"></i> Web & Tools</h3>
+                        <div class="skill-badges">
+                            <span class="badge"><i class="fab fa-git-alt"></i> Git</span>
+                            <span class="badge"><i class="fab fa-linux"></i> Linux</span>
+                            <span class="badge"><i class="fas fa-server"></i> REST APIs</span>
+                            <span class="badge"><i class="fas fa-database"></i> PostgreSQL</span>
+                            <span class="badge"><i class="fab fa-docker"></i> Docker</span>
+                            <span class="badge"><i class="fab fa-jira"></i> Jira</span>
+                            <span class="badge"><i class="fas fa-code"></i> VS Code</span>
+                            <span class="badge"><i class="fas fa-code"></i> IntelliJ</span>
+                            <span class="badge"><i class="fas fa-rocket"></i> Postman</span>
+                            <span class="badge"><i class="fas fa-project-diagram"></i> Agile</span>
+                        </div>
+                    </div>
+                    <!-- Cyber & AI -->
+                    <div class="skill-category">
+                        <h3><i class="fas fa-shield-alt"></i> Cyber & AI</h3>
+                        <div class="skill-badges">
+                            <span class="badge"><i class="fas fa-user-secret"></i> Ethical Hacking</span>
+                            <span class="badge"><i class="fas fa-brain"></i> AI/ML</span>
+                            <span class="badge"><i class="fas fa-lock"></i> Cryptography</span>
+                            <span class="badge"><i class="fas fa-network-wired"></i> Network Security</span>
+                            <span class="badge"><i class="fas fa-search"></i> Forensics</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="section">
+                <h2 class="section-title">Projects</h2>
+                <div class="projects-slider-container">
+                    <div class="projects-slider">
+                        <!-- Project 1 -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="assets/foxhole-lounge.png" alt="Foxhole Lounge App">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-header">
+                                    <h3>Foxhole Lounge</h3>
+                                    <span class="year">Aug 2025 - May 2026</span>
+                                </div>
+                                <p class="project-desc">Mobile app initiative by the Lower 22 Foundation supporting U.S.
+                                    veterans.</p>
+                                <ul class="project-details">
+                                    <li>Built Flutter/Dart UI screens and integrated Firebase Auth + Firestore
+                                        workflows.
+                                    </li>
+                                    <li>Improved accessibility, responsiveness, and design consistency across the
+                                        platform.
+                                    </li>
+                                </ul>
+                                <div class="tech-stack">
+                                    <span>Flutter</span>
+                                    <span>Dart</span>
+                                    <span>Firebase</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project 2 -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="assets/discord-bot.png" alt="Discord Meme Bot">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-header">
+                                    <h3>Discord Meme Bot</h3>
+                                    <span class="year">Sep 2025</span>
+                                </div>
+                                <p class="project-desc">Python application that delivers random memes to Discord
+                                    servers.</p>
+                                <ul class="project-details">
+                                    <li>Built using discord.py with asynchronous event handling and REST API
+                                        integration.</li>
+                                    <li>Fetches memes from Reddit's Meme API with JSON data parsing.</li>
+                                </ul>
+                                <div class="tech-stack">
+                                    <span>Python</span>
+                                    <span>discord.py</span>
+                                    <span>REST API</span>
+                                    <span>JSON</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project 3 -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="assets/exa-search.png" alt="Exa Search UI">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-header">
+                                    <h3>Custom Search Engine</h3>
+                                    <span class="year">Apr 2025</span>
+                                </div>
+                                <p class="project-desc">Full-stack AI semantic search engine delivering context-aware
+                                    results.
+                                </p>
+                                <ul class="project-details">
+                                    <li>Implemented custom ranking logic and multi-domain filters (TikTok, Wikipedia,
+                                        Docs).
+                                    </li>
+                                    <li>Utilized Python, Flask, and Exa API for real-time metadata extraction.</li>
+                                </ul>
+                                <div class="tech-stack">
+                                    <span>Python</span>
+                                    <span>Flask</span>
+                                    <span>Exa API</span>
+                                    <span>AI</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project 3 -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="assets/weather-app.jpg" alt="Weather App UI">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-header">
+                                    <h3>Weather API App</h3>
+                                    <span class="year">Nov 2024</span>
+                                </div>
+                                <p class="project-desc">Responsive weather dashboard with real-time data visualization.
+                                </p>
+                                <ul class="project-details">
+                                    <li>Displays 4-day forecasts via OpenWeatherMap API using async calls.</li>
+                                    <li>Features dynamic UI with glassmorphism and secure key handling via Vite.</li>
+                                </ul>
+                                <div class="tech-stack">
+                                    <span>HTML/CSS/JS</span>
+                                    <span>API</span>
+                                    <span>Vite</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project 4 -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="assets/compass360.jpg" alt="Compass360 Screenshots">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-header">
+                                    <h3>Compass360</h3>
+                                    <span class="year">Oct 2024</span>
+                                </div>
+                                <p class="project-desc">Comprehensive course management and help system.</p>
+                                <ul class="project-details">
+                                    <li>Developed user authentication, course tracking, and student-help articles.</li>
+                                    <li>Built using Java, JavaFX, MySQL, and Scene Builder.</li>
+                                </ul>
+                                <div class="tech-stack">
+                                    <span>Java</span>
+                                    <span>JavaFX</span>
+                                    <span>MySQL</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project 5 -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="assets/project-spyn.jpg" alt="Project SPYN Robot">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-header">
+                                    <h3>Project SPYN</h3>
+                                    <span class="year">Nov 2023</span>
+                                </div>
+                                <p class="project-desc">Autonomous vehicle prototype for mobility assistance.</p>
+                                <ul class="project-details">
+                                    <li>Engineered autonomous navigation through a maze using MATLAB and Lego EV3.</li>
+                                    <li>Directed a team of three to optimize control efficiency.</li>
+                                </ul>
+                                <div class="tech-stack">
+                                    <span>MATLAB</span>
+                                    <span>Robotics</span>
+                                    <span>Team Lead</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="experience" class="section">
+                <h2 class="section-title">Experience</h2>
+                <div class="experience-list">
+                    <div class="experience-item">
+                        <div class="exp-header">
+                            <h3>Technology Consultant</h3>
+                            <span class="date">July 2024 - Present</span>
+                        </div>
+                        <h4 class="company">LX Space Success at ASU</h4>
+                        <ul class="exp-details">
+                            <li>Provide IT support and technical training across all university classrooms on Tempe
+                                campus.
+                            </li>
+                            <li>Reduced downtime during emergencies and ensured seamless hybrid learning experiences.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="experience-item">
+                        <div class="exp-header">
+                            <h3>Software Development Intern</h3>
+                            <span class="date">May 2025 - Aug 2025</span>
+                        </div>
+                        <h4 class="company">Gurus of Web</h4>
+                        <ul class="exp-details">
+                            <li>Developed a modular Flask REST API with PostgreSQL and JWT authentication.</li>
+                            <li>Improved system reliability by 40% through comprehensive PyTest unit tests.</li>
+                            <li>Built a full-stack task management tool (Jinja2, Bootstrap, JS) improving sprint
+                                efficiency
+                                by 25%.</li>
+                        </ul>
+                    </div>
+                    <div class="experience-item">
+                        <div class="exp-header">
+                            <h3>Verizon Cloud Platform Job Sim</h3>
+                            <span class="date">Nov 2023</span>
+                        </div>
+                        <h4 class="company">Forage</h4>
+                        <ul class="exp-details">
+                            <li>Engineered a cloud-native VPN prototype in Python to simulate compliance testing.</li>
+                            <li>Demonstrated 30% vulnerability reduction through automated checks.</li>
+                            <li>Authored documentation on threat mitigation simulating $50k/year savings.</li>
+                        </ul>
+                    </div>
+                    <!-- Experience 3 -->
+                    <div class="experience-item">
+                        <div class="exp-header">
+                            <h3>Technical Intern - Business Support Systems</h3>
+                            <span class="date">Oct 2021 – Jul 2022</span>
+                        </div>
+                        <h4 class="company">Krishna Steel Udyog, India</h4>
+                        <ul class="exp-details">
+                            <li>Utilized Python and spreadsheet automation to streamline inventory tracking and digitize
+                                manual processes in a mid-scale manufacturing environment.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="section">
+                <h2 class="section-title">Let's Connect</h2>
+                <div class="contact-container">
+                    <p class="contact-intro">I'm always open to discussing new projects, creative ideas, or
+                        opportunities to be part of your vision.</p>
+                    <div class="contact-buttons">
+                        <a href="mailto:devianshig22@gmail.com" class="contact-btn email-btn">
+                            <i class="fas fa-envelope"></i>
+                            <span>Email Me</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/devianshig/" target="_blank" rel="noopener noreferrer"
+                            class="contact-btn linkedin-btn">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Devianshi. Built with <i class="fas fa-code"></i> & <i class="fas fa-coffee"></i>.</p>
+        </footer>
+
+        <script src="script.js"></script>
+</body>
+
+</html>
