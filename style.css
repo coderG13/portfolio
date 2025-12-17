@@ -815,6 +815,23 @@ header {
     color: var(--accent-primary);
 }
 
+.github-btn {
+    background: transparent;
+    color: var(--text-color);
+    border: 2px solid var(--border-color);
+}
+
+.github-btn:hover {
+    border-color: var(--accent-secondary);
+    background: rgba(189, 0, 255, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(189, 0, 255, 0.2);
+}
+
+.github-btn i {
+    color: var(--accent-secondary);
+}
+
 
 /* Mobile */
 @media (max-width: 768px) {
