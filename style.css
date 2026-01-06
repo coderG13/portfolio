@@ -1,31 +1,55 @@
 :root {
-    --bg-color: #050505;
-    --text-color: #ffffff;
-    --text-secondary: #a0a0a0;
-    --accent-primary: #007bff;
-    /* Electric Blue */
-    --accent-secondary: #bd00ff;
-    /* Purple */
-    --gradient-main: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-    --card-bg: rgba(20, 20, 20, 0.6);
-    --border-color: #222222;
-    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    --transition: all 0.3s ease;
-    --glow-shadow: 0 0 20px rgba(0, 123, 255, 0.15);
-    --header-bg: rgba(5, 5, 5, 0.7);
+    --bg-color: #030303;
+    /* Deeper black */
+    --text-color: #ededed;
+    --text-secondary: #888888;
+
+    /* Vercel-inspired Accents */
+    --accent-primary: #3291ff;
+    /* Bright Blue */
+    --accent-glow: rgba(50, 145, 255, 0.4);
+
+    /* Subtle Gradients */
+    --gradient-text: linear-gradient(135deg, #fff 0%, #a5a5a5 100%);
+    --gradient-main: linear-gradient(135deg, #0070f3, #7928ca);
+    /* Vercel Brand Colors */
+
+    /* Surface & Borders */
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --card-border: rgba(255, 255, 255, 0.1);
+    --border-color: #333;
+
+    /* Typography */
+    --font-primary: 'Inter',
+        -apple-system,
+        BlinkMacSystemFont,
+        'Segoe UI',
+        Roboto,
+        sans-serif;
+    --font-mono: 'JetBrains Mono',
+        monospace;
+
+    --transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    /* Smoother bezier */
+    --header-bg: rgba(3, 3, 3, 0.6);
+    --glow-shadow: 0 0 40px rgba(0, 112, 243, 0.15);
 }
 
 .light-mode {
     --bg-color: #ffffff;
-    --text-color: #000000;
-    --text-secondary: #555555;
-    --accent-primary: #0056b3;
-    --accent-secondary: #8000b0;
-    --gradient-main: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-    --card-bg: #f8f9fa;
-    --border-color: #e0e0e0;
-    --glow-shadow: 0 0 15px rgba(0, 86, 179, 0.1);
-    --header-bg: rgba(255, 255, 255, 0.85);
+    --text-color: #111111;
+    --text-secondary: #666666;
+
+    --accent-primary: #0070f3;
+    --accent-glow: rgba(0, 112, 243, 0.3);
+
+    --gradient-text: linear-gradient(135deg, #000 0%, #444 100%);
+    --card-bg: #ffffff;
+    --card-border: #eaeaea;
+    --border-color: #eaeaea;
+
+    --header-bg: rgba(255, 255, 255, 0.8);
+    --glow-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
 }
 
 * {
@@ -36,13 +60,15 @@
 
 body {
     background-color: var(--bg-color);
-    background-image: radial-gradient(circle at 10% 20%, rgba(0, 123, 255, 0.05) 0%, transparent 20%),
-        radial-gradient(circle at 90% 80%, rgba(189, 0, 255, 0.05) 0%, transparent 20%);
+    background-image:
+        radial-gradient(circle at 15% 50%, rgba(0, 112, 243, 0.05) 0%, transparent 25%),
+        radial-gradient(circle at 85% 30%, rgba(121, 40, 202, 0.05) 0%, transparent 25%);
     color: var(--text-color);
     font-family: var(--font-primary);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
-    cursor: none;
+    cursor: default;
+    /* Revert custom cursor if needed, or keep 'none' */
     overflow-x: hidden;
 }
 
@@ -170,21 +196,38 @@ header {
 }
 
 .hero-content {
-    max-width: 600px;
+    max-width: 650px;
 }
 
-.hero-image {
-    flex-shrink: 0;
-    width: 350px;
-    height: 350px;
-    position: relative;
-    border-radius: 50%;
-    /* Circular or rounded square */
+.hero-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(50, 145, 255, 0.1);
+    border: 1px solid rgba(50, 145, 255, 0.3);
+    color: var(--accent-primary);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+    backdrop-filter: blur(5px);
+}
+
+.name {
+    font-size: 4rem;
+    /* Slightly smaller for cleaner look */
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -2px;
+    color: var(--text-color);
+}
+
+.text-gradient {
     background: var(--gradient-main);
-    padding: 4px;
-    /* Border width */
-    box-shadow: var(--glow-shadow);
-    animation: float 6s ease-in-out infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .profile-pic-hero {
@@ -209,21 +252,7 @@ header {
     }
 }
 
-.name {
-    font-size: 5.5rem;
-    font-weight: 800;
-    line-height: 1.1;
-    margin-bottom: 1rem;
-    letter-spacing: -2px;
-}
-
-.name:hover {
-    background: var(--gradient-main);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: all 0.5s ease;
-}
+/* Removed old .name styles in favor of new block above */
 
 .tagline {
     font-size: 1.8rem;
@@ -346,11 +375,57 @@ header {
     filter: blur(15px);
 }
 
-.about-text p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
+/* About & Value Prop */
+.about-headline {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.value-prop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.prop-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    padding: 1.5rem;
+    border-radius: 12px;
+    transition: var(--transition);
+}
+
+.prop-card:hover {
+    border-color: var(--accent-primary);
+    transform: translateY(-5px);
+}
+
+.prop-card i {
+    font-size: 1.5rem;
+    color: var(--accent-primary);
+    margin-bottom: 1rem;
+}
+
+.prop-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.prop-card p {
+    font-size: 0.9rem;
     color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0;
+    /* Override default */
 }
 
 /* Education Section */
@@ -571,31 +646,33 @@ header {
 
 .project-card {
     background: var(--card-bg);
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--card-border);
     padding: 0;
-    /* Removed padding for image */
-    border-radius: 16px;
+    border-radius: 12px;
     transition: var(--transition);
     display: flex;
     flex-direction: column;
-    min-height: 350px;
-    width: 300px;
-    /* Fixed width to ensure equality */
-    position: relative;
-    backdrop-filter: blur(5px);
-    scroll-snap-align: start;
+    min-height: 400px;
+    min-width: 380px;
+    width: 380px;
     flex-shrink: 0;
+    /* Explicitly prevent shrinking */
+    position: relative;
     overflow: hidden;
-    /* Ensure image respects border radius */
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3);
+    border-color: var(--text-secondary);
 }
 
 .project-image {
     width: 100%;
-    height: 200px;
-    /* Increased height for better view */
+    height: 180px;
+    /* Slightly shorter to give text room */
     overflow: hidden;
+    border-bottom: 1px solid var(--card-border);
 }
 
 .project-image img {
@@ -603,12 +680,12 @@ header {
     height: 100%;
     object-fit: cover;
     object-position: top;
-    /* Ensure top of UI is visible */
-    transition: transform 0.5s ease;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .project-card:hover .project-image img {
-    transform: scale(1.1);
+    transform: scale(1.05);
+    /* Subtle zoom */
 }
 
 .card-content {
@@ -702,59 +779,54 @@ header {
     border: 1px solid var(--border-color);
 }
 
-/* Experience List */
+/* Experience List - Timeline Style */
 .experience-list {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    position: relative;
+    padding-left: 2rem;
+    border-left: 1px solid var(--card-border);
 }
 
 .experience-item {
-    border: 1px solid var(--border-color);
-    background: var(--card-bg);
-    padding: 2.5rem;
-    border-radius: 12px;
-    transition: var(--transition);
+    border: none;
+    background: transparent;
+    padding: 0 0 3rem 1.5rem;
+    position: relative;
+}
+
+.experience-item::before {
+    content: '';
+    position: absolute;
+    left: -2.35rem;
+    /* center on border line */
+    top: 0;
+    width: 12px;
+    height: 12px;
+    background: var(--bg-color);
+    border: 2px solid var(--accent-primary);
+    border-radius: 50%;
+    z-index: 1;
 }
 
 .experience-item:hover {
-    border-color: var(--accent-secondary);
-    transform: translateX(10px);
-}
-
-.exp-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 0.5rem;
+    transform: none;
+    border-color: transparent;
 }
 
 .exp-header h3 {
-    font-size: 1.4rem;
-    font-weight: 600;
-}
-
-.date {
-    font-family: monospace;
-    color: var(--accent-secondary);
+    font-size: 1.2rem;
+    color: var(--text-color);
 }
 
 .company {
-    font-size: 1.1rem;
-    color: var(--text-secondary);
-    font-weight: 400;
-    margin-bottom: 1.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--accent-primary);
+    margin-bottom: 1rem;
 }
 
 .exp-details {
-    list-style: disc;
-    padding-left: 1.2rem;
     color: var(--text-secondary);
-}
-
-.exp-details li {
-    margin-bottom: 0.5rem;
-    line-height: 1.6;
+    font-size: 0.95rem;
 }
 
 /* Contact */
