@@ -1,481 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Devianshi Goyal | Software Engineer</title>
-    <meta name="description"
-        content="Software Engineer specializing in Cybersecurity and AI. Building scalable, secure, and intelligent systems.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <!-- Placeholder for FontAwesome, user might need their own kit or I can use a CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Devianshi Goyal — Software Engineer</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230D1117'/%3E%3Ctext x='32' y='42' font-family='sans-serif' font-size='24' font-weight='700' fill='%235B82F0' text-anchor='middle'%3EDG%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="cursor-dot" id="cursor-dot"></div>
-    <div class="cursor-outline" id="cursor-outline"></div>
 
-    <header>
-        <nav class="navbar">
-            <div class="logo">&lt;Devianshi Goyal /&gt;</div>
-            <ul class="nav-links">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button></li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </nav>
-    </header>
+<div class="app">
+  <header class="topbar">
+    <div class="brand">Devianshi Goyal</div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle color theme">
+      <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </header>
 
-    <main>
-        <section id="hero" class="hero">
-            <div class="hero-container">
-                <div class="hero-content reveal">
-                    <div class="hero-badge">Available for Full-Time Roles</div>
-                    <h1 class="name">Engineering Future-Proof <br> <span class="text-gradient">Secure Systems</span>
-                    </h1>
-                    <p class="tagline">Software Engineer specializing in Cybersecurity & AI</p>
-                    <p class="sub-tagline">I bridge the gap between robust software architecture and intelligent
-                        security.
-                        Building scalable, high-performance applications with a focus on defense-in-depth and autonomous
-                        systems.</p>
-                    <div class="cta-buttons">
-                        <a href="#projects" class="btn primary-btn">View My Work</a>
-                        <a href="assets/DevianshiGoyal.pdf" target="_blank" class="btn secondary-btn">Download
-                            Resume</a>
-                    </div>
-                </div>
-                <div class="hero-image reveal">
-                    <img src="assets/profile.jpg" alt="Devianshi Goyal" class="profile-pic-hero">
-                </div>
-            </div>
-        </section>
+  <main id="grid">
+    <!-- Profile -->
+    <section class="card c-profile">
+      <div class="profile-top">
+        <div class="avatar">
+          <img id="avatarImg" src="images/avatar.png" alt="Devianshi Goyal" onerror="this.style.display='none'; document.getElementById('avatarFallback').style.display='flex';">
+          <div class="avatar-fallback" id="avatarFallback">DG</div>
+        </div>
+        <div>
+          <h1>Devianshi Goyal</h1>
+          <div class="role">Software Engineer</div>
+        </div>
+      </div>
+      <p class="bio">I build backend systems and applied AI tools — the kind that hold up outside a demo. Focused on Python, LLM-powered apps, and databases that don't fall over at scale.</p>
+      <div class="quickfacts">
+        <span><b>Location</b>Seattle, WA</span>
+        <span><b>Languages</b>English, Hindi, French</span>
+      </div>
+      <div class="links">
+        <a href="mailto:devianshig22@gmail.com" class="icon-link" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 5h20v14H2z"/><path d="m2 6 10 8L22 6"/></svg>
+        </a>
+        <a href="https://github.com/coderG13" target="_blank" rel="noopener" class="icon-link" aria-label="GitHub">
+          <img src="images/icons/github.png" alt="">
+        </a>
+        <a href="https://linkedin.com/in/devianshig" target="_blank" rel="noopener" class="icon-link" aria-label="LinkedIn">
+          <img src="images/icons/linkedin.png" alt="">
+        </a>
+      </div>
+    </section>
 
-        <main>
-            <section id="about" class="section">
-                <h2 class="section-title reveal">About Me</h2>
-                <div class="about-content">
-                    <div class="about-text reveal">
-                        <h3 class="about-headline">I build software that isn't just functional—it's secure, intelligent,
-                            and scalable.</h3>
-                        <p>
-                            As a Computer Science senior at Arizona State University, I don't just write code; I
-                            engineer solutions.
-                            My passion lies at the intersection of <strong>Full-Stack Development</strong>,
-                            <strong>Cybersecurity</strong>, and <strong>AI</strong>.
-                        </p>
-                        <p>
-                            Whether I'm architecting a cloud-native VPN to simulate compliance testing or developing
-                            autonomous navigation algorithms,
-                            my goal is consistent: <strong>deliver high-impact technology that solves real-world
-                                problems.</strong>
-                        </p>
+    <!-- Skills — the big one -->
+    <section class="card c-skills">
+      <div class="eyebrow">Skills</div>
+      <div class="skill-block">
+        <div class="g-label">Languages &amp; Frameworks</div>
+        <div class="icon-grid" id="langGrid"></div>
+      </div>
+      <div class="skill-block">
+        <div class="g-label">Backend, DB &amp; Tools</div>
+        <div class="icon-grid" id="backendGrid"></div>
+      </div>
+      <div class="skill-block">
+        <div class="g-label">AI &amp; LLM</div>
+        <div class="chip-row" id="aiChips"></div>
+      </div>
+      <div class="skill-block">
+        <div class="g-label">Also</div>
+        <div class="chip-row" id="alsoChips"></div>
+      </div>
+    </section>
 
-                        <!-- Value Proposition Section -->
-                        <div class="value-prop-grid">
-                            <div class="prop-card">
-                                <i class="fas fa-shield-alt"></i>
-                                <h4>Security First</h4>
-                                <p>Embedding security principles from day one, not as an afterthought.</p>
-                            </div>
-                            <div class="prop-card">
-                                <i class="fas fa-server"></i>
-                                <h4>Scalable Architecture</h4>
-                                <p>Designing systems meant to grow, using modern cloud & backend best practices.</p>
-                            </div>
-                            <div class="prop-card">
-                                <i class="fas fa-brain"></i>
-                                <h4>AI Integration</h4>
-                                <p>Leveraging machine learning to create smarter, adaptive user experiences.</p>
-                            </div>
-                        </div>
+    <!-- Experience -->
+    <section class="card c-experience">
+      <div class="eyebrow">Experience</div>
+      <div class="exp-grid" id="expGrid"></div>
+    </section>
 
-                        <div class="education-section reveal">
-                            <h3>Education</h3>
-                            <div class="education-item">
-                                <div class="education-header">
-                                    <strong>Bachelor of Science in Computer Science</strong>
-                                    <span class="education-year">May 2026</span>
-                                </div>
-                                <p class="education-university">Arizona State University</p>
-                                <p class="education-recognition"><i class="fas fa-award"></i> Dean's List Recognition
-                                    (2022–2025)</p>
-                                <div class="relevant-courses">
-                                    <h4>Relevant Coursework:</h4>
-                                    <div class="course-tags">
-                                        <span>Data Structures & Algorithms</span>
-                                        <span>Intro to Software Engineering</span>
-                                        <span>Principles of Programming Languages</span>
-                                        <span>Operating Systems</span>
-                                        <span>Computer and Network Forensics</span>
-                                        <span>Distributed Software Development</span>
-                                        <span>Intro Artificial Intelligence</span>
-                                        <span>Intro Human Computer Interaction</span>
-                                        <span>Data & Information Security</span>
-                                        <span>Computer Network Security</span>
-                                    </div>
-                                </div>
+    <!-- Projects -->
+    <section class="card c-projects">
+      <div class="list-head">
+        <div class="eyebrow">Projects</div>
+        <a class="all-link" href="https://github.com/coderG13" target="_blank" rel="noopener">All →</a>
+      </div>
+      <ul class="proj-list" id="projList"></ul>
+    </section>
 
-                                <div class="relevant-courses" style="margin-top: 1.5rem;">
-                                    <h4>Leadership:</h4>
-                                    <p
-                                        style="color: var(--text-secondary); font-size: 0.95rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
-                                        <span>Elemental Member, American Association for the Advancement of Science
-                                            (AAAS)</span>
-                                        <span class="education-year" style="font-size: 0.9rem;">Jan 2025 -
-                                            Present</span>
-                                    </p>
-                                </div>
+    <!-- Education -->
+    <section class="card c-education">
+      <div class="eyebrow">Education</div>
+      <div class="edu-row">
+        <div class="edu-main">
+          <div class="lvl" id="eduLevel"></div>
+          <div class="det" id="eduDet"></div>
+        </div>
+        <div class="edu-course">
+          <div class="g-label">Relevant Coursework</div>
+          <div class="chip-row" id="courseChips"></div>
+        </div>
+      </div>
+      <div class="eyebrow" style="margin-top:16px;">Certifications</div>
+      <div class="chip-row" id="certChips"></div>
+    </section>
+  </main>
+</div>
 
-                                <div class="relevant-courses" style="margin-top: 1.5rem;">
-                                    <h4>Certifications:</h4>
-                                    <div class="course-tags">
-                                        <span>Udemy C Programming</span>
-                                        <span>HackerRank SQL</span>
-                                        <span>Cloud Computing</span>
-                                        <span>Ethical Hacking in IoT and Cyber Space</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </div>
-            </section>
+<div class="modal-backdrop" id="modalBackdrop">
+  <div class="modal" role="dialog" aria-modal="true">
+    <div class="modal-top">
+      <div>
+        <div class="eyebrow" id="modalEyebrow"></div>
+        <h3 id="modalTitle"></h3>
+        <div class="modal-sub" id="modalSub"></div>
+      </div>
+      <button class="modal-close" id="modalClose" aria-label="Close">
+        <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
 
-            <section id="skills" class="section">
-                <h2 class="section-title reveal">Technical Arsenal</h2>
-                <div class="skills-grid reveal">
-                    <!-- Languages -->
-                    <div class="skill-category">
-                        <h3><i class="fas fa-code"></i> Languages</h3>
-                        <div class="skill-badges">
-                            <span class="badge"><i class="fab fa-python"></i> Python</span>
-                            <span class="badge"><i class="fab fa-java"></i> Java</span>
-                            <span class="badge"><i class="fas fa-code"></i> C/C++</span>
-                            <span class="badge"><i class="fab fa-js"></i> JavaScript</span>
-                            <span class="badge"><i class="fas fa-database"></i> SQL</span>
-                            <span class="badge"><i class="fas fa-calculator"></i> MATLAB</span>
-                            <span class="badge"><i class="fas fa-code"></i> Scheme</span>
-                            <span class="badge"><i class="fas fa-terminal"></i> Bash</span>
-                        </div>
-                    </div>
-                    <!-- Frameworks & Libs -->
-                    <div class="skill-category">
-                        <h3><i class="fas fa-layer-group"></i> Frameworks & Libs</h3>
-                        <div class="skill-badges">
-                            <span class="badge"><i class="fab fa-react"></i> React</span>
-                            <span class="badge"><i class="fab fa-node-js"></i> Node.js</span>
-                            <span class="badge"><i class="fas fa-server"></i> Django</span>
-                            <span class="badge"><i class="fab fa-bootstrap"></i> Bootstrap</span>
-                            <span class="badge"><i class="fas fa-desktop"></i> JavaFX</span>
-                            <span class="badge"><i class="fas fa-wind"></i> Animate.css</span>
-                            <span class="badge"><i class="fas fa-table"></i> Pandas</span>
-                            <span class="badge"><i class="fas fa-calculator"></i> NumPy</span>
-                            <span class="badge"><i class="fas fa-brain"></i> Scikit-learn</span>
-                            <span class="badge"><i class="fas fa-mobile-alt"></i> Flutter</span>
-                            <span class="badge"><i class="fas fa-code"></i> Dart</span>
-                        </div>
-                    </div>
-                    <!-- Web & Cloud -->
-                    <div class="skill-category">
-                        <h3><i class="fas fa-cloud"></i> Web & Tools</h3>
-                        <div class="skill-badges">
-                            <span class="badge"><i class="fab fa-git-alt"></i> Git</span>
-                            <span class="badge"><i class="fab fa-linux"></i> Linux</span>
-                            <span class="badge"><i class="fas fa-server"></i> REST APIs</span>
-                            <span class="badge"><i class="fas fa-database"></i> PostgreSQL</span>
-                            <span class="badge"><i class="fab fa-docker"></i> Docker</span>
-                            <span class="badge"><i class="fab fa-jira"></i> Jira</span>
-                            <span class="badge"><i class="fas fa-code"></i> VS Code</span>
-                            <span class="badge"><i class="fas fa-code"></i> IntelliJ</span>
-                            <span class="badge"><i class="fas fa-rocket"></i> Postman</span>
-                            <span class="badge"><i class="fas fa-project-diagram"></i> Agile</span>
-                        </div>
-                    </div>
-                    <!-- Cyber & AI -->
-                    <div class="skill-category">
-                        <h3><i class="fas fa-shield-alt"></i> Cyber & AI</h3>
-                        <div class="skill-badges">
-                            <span class="badge"><i class="fas fa-user-secret"></i> Ethical Hacking</span>
-                            <span class="badge"><i class="fas fa-brain"></i> AI/ML</span>
-                            <span class="badge"><i class="fas fa-lock"></i> Cryptography</span>
-                            <span class="badge"><i class="fas fa-network-wired"></i> Network Security</span>
-                            <span class="badge"><i class="fas fa-search"></i> Forensics</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="projects" class="section">
-                <h2 class="section-title reveal">Projects</h2>
-                <div class="projects-slider-container reveal">
-                    <div class="projects-slider">
-                        <!-- Project 1 -->
-                        <!-- Project 1 (Flagship) -->
-                        <div class="project-card">
-                            <div class="project-image">
-                                <img src="assets/exa-search.png" alt="Exa Search UI">
-                            </div>
-                            <div class="card-content">
-                                <div class="card-header">
-                                    <h3>Custom AI Search Engine</h3>
-                                    <span class="year">2025</span>
-                                </div>
-                                <p class="project-desc">Content-aware semantic search engine delivering high-precision
-                                    results.</p>
-                                <ul class="project-details">
-                                    <li>Engineered custom ranking logic and multi-domain filtering (TikTok, Wikipedia,
-                                        Docs).</li>
-                                    <li>Integrated <strong>Exa API</strong> for real-time metadata extraction and
-                                        semantic analysis.</li>
-                                    <li>Built a responsive Flask + Python backend handling complex query parameters.
-                                    </li>
-                                </ul>
-                                <div class="tech-stack">
-                                    <span>Python</span>
-                                    <span>Flask</span>
-                                    <span>AI/ML</span>
-                                    <span>Exa API</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Project 2 -->
-                        <div class="project-card">
-                            <div class="project-image">
-                                <img src="assets/foxhole-lounge.png" alt="Foxhole Lounge App">
-                            </div>
-                            <div class="card-content">
-                                <div class="card-header">
-                                    <h3>Foxhole Lounge</h3>
-                                    <span class="year">2025-26</span>
-                                </div>
-                                <p class="project-desc">Cross-platform mobile application supporting U.S. Veteran
-                                    communities.</p>
-                                <ul class="project-details">
-                                    <li>Architected secure authentication flows using <strong>Firebase Auth</strong> and
-                                        real-time data sync via <strong>Firestore</strong>.</li>
-                                    <li>Optimized Flutter UI performance, achieving 60fps animations across devices.
-                                    </li>
-                                    <li>Led accessibility initiatives to ensure WCAG compliance for veteran users.</li>
-                                </ul>
-                                <div class="tech-stack">
-                                    <span>Flutter</span>
-                                    <span>Dart</span>
-                                    <span>Firebase</span>
-                                    <span>iOS/Android</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Project 3 -->
-                        <div class="project-card">
-                            <div class="project-image">
-                                <img src="assets/discord-bot.png" alt="Discord Meme Bot">
-                            </div>
-                            <div class="card-content">
-                                <div class="card-header">
-                                    <h3>Discord Bot Microservice</h3>
-                                    <span class="year">2025</span>
-                                </div>
-                                <p class="project-desc">High-concurrency Discord bot server for community engagement.
-                                </p>
-                                <ul class="project-details">
-                                    <li>Implemented asynchronous event handling with <strong>discord.py</strong> to
-                                        support multiple server instances.</li>
-                                    <li>Integrated generic REST APIs for dynamic content fetching (Memes, Reddit).</li>
-                                    <li>Deployed on cloud infrastructure with automated keep-alive checks.</li>
-                                </ul>
-                                <div class="tech-stack">
-                                    <span>Python</span>
-                                    <span>AsyncIO</span>
-                                    <span>REST API</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Project 3 -->
-                        <div class="project-card">
-                            <div class="project-image">
-                                <img src="assets/weather-app.jpg" alt="Weather App UI">
-                            </div>
-                            <div class="card-content">
-                                <div class="card-header">
-                                    <h3>Weather API App</h3>
-                                    <span class="year">Nov 2024</span>
-                                </div>
-                                <p class="project-desc">Responsive weather dashboard with real-time data visualization.
-                                </p>
-                                <ul class="project-details">
-                                    <li>Displays 4-day forecasts via OpenWeatherMap API using async calls.</li>
-                                    <li>Features dynamic UI with glassmorphism and secure key handling via Vite.</li>
-                                </ul>
-                                <div class="tech-stack">
-                                    <span>HTML/CSS/JS</span>
-                                    <span>API</span>
-                                    <span>Vite</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Project 4 -->
-                        <div class="project-card">
-                            <div class="project-image">
-                                <img src="assets/compass360.jpg" alt="Compass360 Screenshots">
-                            </div>
-                            <div class="card-content">
-                                <div class="card-header">
-                                    <h3>Compass360</h3>
-                                    <span class="year">Oct 2024</span>
-                                </div>
-                                <p class="project-desc">Comprehensive course management and help system.</p>
-                                <ul class="project-details">
-                                    <li>Developed user authentication, course tracking, and student-help articles.</li>
-                                    <li>Built using Java, JavaFX, MySQL, and Scene Builder.</li>
-                                </ul>
-                                <div class="tech-stack">
-                                    <span>Java</span>
-                                    <span>JavaFX</span>
-                                    <span>MySQL</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Project 5 -->
-                        <div class="project-card">
-                            <div class="project-image">
-                                <img src="assets/project-spyn.jpg" alt="Project SPYN Robot">
-                            </div>
-                            <div class="card-content">
-                                <div class="card-header">
-                                    <h3>Project SPYN</h3>
-                                    <span class="year">Nov 2023</span>
-                                </div>
-                                <p class="project-desc">Autonomous vehicle prototype for mobility assistance.</p>
-                                <ul class="project-details">
-                                    <li>Engineered autonomous navigation through a maze using MATLAB and Lego EV3.</li>
-                                    <li>Directed a team of three to optimize control efficiency.</li>
-                                </ul>
-                                <div class="tech-stack">
-                                    <span>MATLAB</span>
-                                    <span>Robotics</span>
-                                    <span>Team Lead</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="experience" class="section">
-                <h2 class="section-title reveal">Experience</h2>
-                <div class="experience-list">
-                    <div class="experience-item reveal">
-                        <div class="exp-header">
-                            <h3>Software Development Intern</h3>
-                            <span class="date">May 2025 - Aug 2025</span>
-                        </div>
-                        <h4 class="company">Gurus of Web</h4>
-                        <ul class="exp-details">
-                            <li><strong>Backend Engineering:</strong> Developed a modular Flask REST API with PostgreSQL
-                                and JWT authentication, ensuring secure data handling.</li>
-                            <li><strong>Reliability:</strong> Reduced production bugs and improved system reliability by
-                                <strong>40%</strong> through comprehensive PyTest unit test coverage.
-                            </li>
-                            <li><strong>Productivity Tools:</strong> Built an internal task management tool (Jinja2,
-                                Bootstrap) that improved sprint planning efficiency by <strong>25%</strong>.</li>
-                        </ul>
-                    </div>
-
-                    <div class="experience-item reveal">
-                        <div class="exp-header">
-                            <h3>Technology Consultant</h3>
-                            <span class="date">July 2024 - Present</span>
-                        </div>
-                        <h4 class="company">LX Space Success at Arizona State University</h4>
-                        <ul class="exp-details">
-                            <li><strong>Incident Response:</strong> Provide rapid technical support for complex AV/IT
-                                systems across Tempe campus, maintaining <strong>99% uptime</strong> for hybrid learning
-                                environments.</li>
-                            <li><strong>Training:</strong> Direct technical training sessions for faculty, reducing
-                                recurring user-error tickets by 15%.</li>
-                        </ul>
-                    </div>
-
-                    <div class="experience-item reveal">
-                        <div class="exp-header">
-                            <h3>Cloud Platform Engineer</h3>
-                            <span class="date">Nov 2023</span>
-                        </div>
-                        <h4 class="company">Verizon (Forage)</h4>
-                        <ul class="exp-details">
-                            <li><strong>Security Architecture:</strong> Engineered a python-based cloud-native VPN
-                                prototype to validate secure communication protocols.</li>
-                            <li><strong>Vulnerability Management:</strong> Automated security compliance checks,
-                                reducing theoretical vulnerabilities by <strong>30%</strong>.</li>
-                            <li>Authored technical documentation on threat mitigation strategies for enterprise cloud
-                                infrastructure.</li>
-                        </ul>
-                    </div>
-                    <!-- Experience 3 -->
-                    <div class="experience-item reveal">
-                        <div class="exp-header">
-                            <h3>Technical Intern - Business Support Systems</h3>
-                            <span class="date">Oct 2021 – Jul 2022</span>
-                        </div>
-                        <h4 class="company">Krishna Steel Udyog, India</h4>
-                        <ul class="exp-details">
-                            <li>Utilized Python and spreadsheet automation to streamline inventory tracking and digitize
-                                manual processes in a mid-scale manufacturing environment.</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <section id="contact" class="section">
-                <h2 class="section-title reveal">Ready to Collaborate?</h2>
-                <div class="contact-container reveal">
-                    <p class="contact-intro">I'm currently looking for <strong>New Grad 2026</strong> opportunities in
-                        Software Engineering, Cybersecurity, and AI. If you're building a team that values innovation
-                        and security, let's talk.</p>
-                    <div class="contact-buttons">
-                        <a href="mailto:devianshig22@gmail.com" class="contact-btn email-btn">
-                            <i class="fas fa-envelope"></i>
-                            <span>Send Email</span>
-                        </a>
-                        <a href="https://www.linkedin.com/in/devianshig/" target="_blank" rel="noopener noreferrer"
-                            class="contact-btn linkedin-btn">
-                            <i class="fab fa-linkedin"></i>
-                            <span>LinkedIn</span>
-                        </a>
-                        <a href="https://github.com/coderG13" target="_blank" rel="noopener noreferrer"
-                            class="contact-btn github-btn">
-                            <i class="fab fa-github"></i>
-                            <span>GitHub</span>
-                        </a>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer>
-            <p>&copy; 2025 Devianshi. Built with <i class="fas fa-code"></i> & <i class="fas fa-coffee"></i>.</p>
-        </footer>
-
-        <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
-
 </html>
